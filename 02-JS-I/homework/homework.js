@@ -87,10 +87,10 @@ function tienenMismaLongitud(str1, str2) {
 }
 
 function menosQueNoventa(num) {
-  if(num <= 90){
+  if(num < 90){
     return true
   }else{
-    false
+    return false
   }
   // Devuelve "true" si el argumento de la función "num" es menor que noventa
   // De lo contrario, devuelve "false"
@@ -139,19 +139,15 @@ function esImpar(num) {
 }
 
 function elevarAlCuadrado(num) {
-  let cuadrado= (num **2);
-
-  return cuadrado
-
-  
+  return Math.pow(num, 2)
   // Devuelve el valor de "num" elevado al cuadrado
   // ojo: No es raiz cuadrada!
   // Tu código:
 }
 
 function elevarAlCubo(num) {
-  let cubo = num ** 3;
-  return cubo;
+  
+  return Math.pow(num, 3);
   // Devuelve el valor de "num" elevado al cubo
   // Tu código:
 }
@@ -188,14 +184,16 @@ function numeroRandom() {
 }
 
 function esPositivo(numero) {
+  if(numero>0){
+    return "Es postivo";
+  }else if(numero<0){
+    return "Es negativo";
+  }else {
+    return false;
+  }
+    
   
-if(numero == Math.sign(1)){
-  return "Es postivo"
-}else if(numero== Math.sign(-1)){
-  return "Es negativo"
-}else{
-  return "Es falso"
-}
+  
   //La función va a recibir un entero. Devuelve como resultado una cadena de texto que indica si el número es positivo o negativo. 
   //Si el número es positivo, devolver ---> "Es positivo"
   //Si el número es negativo, devolver ---> "Es negativo"
@@ -204,19 +202,17 @@ if(numero == Math.sign(1)){
 
 
 function agregarSimboloExclamacion(str) {
-  let simbolo= [];
-  simbolo= str.push("!")
-  return simbolo;
+ 
+  return str + "!"
   // Agrega un símbolo de exclamación al final de la string "str" y devuelve una nueva string
   // Ejemplo: "hello world" pasaría a ser "hello world!"
   // Tu código:
 }
 
 function combinarNombres(nombre, apellido) {
-  nombre=" Wilson ";
-  apellido= " Valencia ";
 
-  return nombre.concat(apellido)
+
+  return nombre + " " + apellido
   
   // Devuelve "nombre" y "apellido" combinados en una string y separados por un espacio.
   // Ejemplo: "Soy", "Henry" -> "Soy Henry"
@@ -225,9 +221,10 @@ function combinarNombres(nombre, apellido) {
 
 
 function obtenerSaludo(nombre) {
-  let nombre=" Martin! "
-  let saludo=" Hola ";
-  return saludo.concat(nombre)
+
+  let saludo="Hola ";
+
+  return saludo + "" + nombre + "!";
   
   // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
   // "Martin" -> "Hola Martin!"
@@ -246,15 +243,21 @@ function obtenerAreaRectangulo(alto, ancho) {
 
 
 function retornarPerimetro(lado){
+ 
+
+  return lado * 4
   //Escibe una función a la cual reciba el valor del lado de un cuadrado y retorne su perímetro.
   //Escribe tu código aquí
 }
 
 
 function areaDelTriangulo(base, altura){
+
+  let triangulo=base*altura/2
+
   //Desarrolle una función que calcule el área de un triángulo.
   //Escribe tu código aquí
-
+  return triangulo;
 }
 
 
@@ -262,11 +265,23 @@ function deEuroAdolar(euro){
   //Supongamos que 1 euro equivale a 1.20 dólares. Escribe un programa que reciba
   //como parámetro un número de euros y calcule el cambio en dólares.
   //Escribe tu código aquí
-  
+
+return euro * 1.2 
 }
 
 
 function esVocal(letra){
+  if(letra.length > 1){
+    return "Dato incorrecto"
+  } else if (letra === "a" ||
+              letra=== "e" ||
+              letra=== "i" ||
+             letra === "o" ||
+             letra === "u"){
+    return "Es vocal";
+  }
+    return "Dato Incorrecto";
+  
   //Escribe una función que reciba una letra y, si es una vocal, muestre el mensaje “Es vocal”. 
   //Verificar si el usuario ingresó un string de más de un carácter y, en ese caso, informarle 
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
