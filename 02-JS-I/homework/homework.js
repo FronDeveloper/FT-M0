@@ -87,7 +87,7 @@ function tienenMismaLongitud(str1, str2) {
 }
 
 function menosQueNoventa(num) {
-  if(num < 90){
+  if(num <= 90){
     return true
   }else{
     false
@@ -109,79 +109,137 @@ function mayorQueCincuenta(num) {
 }
 
 function obtenerResto(x, y) {
+  let resto = x % y;
+  return resto;
+  
   // Obten el resto de la división de "x" entre "y"
   // Tu código:
 }
 
 function esPar(num) {
+  if(num % 2 == 0){
+    return true;
+  }else{
+    return false;
+  }
   // Devuelve "true" si "num" es par
   // De lo contrario, devuelve "false"
   // Tu código:
 }
 
 function esImpar(num) {
+  if(num % 3 && num % 5 ){
+    return true
+  }else{
+    return false
+  }
   // Devuelve "true" si "num" es impar
   // De lo contrario, devuelve "false"
   // Tu código:
 }
 
 function elevarAlCuadrado(num) {
+  let cuadrado= (num **2);
+
+  return cuadrado
+
+  
   // Devuelve el valor de "num" elevado al cuadrado
   // ojo: No es raiz cuadrada!
   // Tu código:
 }
 
 function elevarAlCubo(num) {
+  let cubo = num ** 3;
+  return cubo;
   // Devuelve el valor de "num" elevado al cubo
   // Tu código:
 }
 
 function elevar(num, exponent) {
+
+  let potencia = Math.pow(num, exponent);
+
+  return potencia;
+  
   // Devuelve el valor de "num" elevado al exponente dado en "exponent"
   // Tu código:
 }
+elevar(5,2)
 
 function redondearNumero(num) {
+  let redondeo=Math.round(num);
+  return redondeo;
   // Redondea "num" al entero más próximo y devuélvelo
   // Tu código:
 }
 
 function redondearHaciaArriba(num) {
+  let redondeoUp = Math.ceil(num);
+  return redondeoUp;
   // Redondea "num" hacia arriba (al próximo entero) y devuélvelo
   // Tu código:
 }
 
 function numeroRandom() {
+  return Math.random();
   //Generar un número al azar entre 0 y 1 y devolverlo
   //Pista: investigá qué hace el método Math.random()
 }
 
 function esPositivo(numero) {
+  
+if(numero == Math.sign(1)){
+  return "Es postivo"
+}else if(numero== Math.sign(-1)){
+  return "Es negativo"
+}else{
+  return "Es falso"
+}
   //La función va a recibir un entero. Devuelve como resultado una cadena de texto que indica si el número es positivo o negativo. 
   //Si el número es positivo, devolver ---> "Es positivo"
   //Si el número es negativo, devolver ---> "Es negativo"
   //Si el número es 0, devuelve false
 }
 
+
 function agregarSimboloExclamacion(str) {
+  let simbolo= [];
+  simbolo= str.push("!")
+  return simbolo;
   // Agrega un símbolo de exclamación al final de la string "str" y devuelve una nueva string
   // Ejemplo: "hello world" pasaría a ser "hello world!"
   // Tu código:
 }
 
 function combinarNombres(nombre, apellido) {
+  nombre=" Wilson ";
+  apellido= " Valencia ";
+
+  return nombre.concat(apellido)
+  
   // Devuelve "nombre" y "apellido" combinados en una string y separados por un espacio.
   // Ejemplo: "Soy", "Henry" -> "Soy Henry"
   // Tu código:
 }
 
+
 function obtenerSaludo(nombre) {
+  let nombre=" Martin! "
+  let saludo=" Hola ";
+  return saludo.concat(nombre)
+  
   // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
   // "Martin" -> "Hola Martin!"
   // Tu código:
 }
 
+
 function obtenerAreaRectangulo(alto, ancho) {
+
+  let area = alto * ancho;
+
+  return area;
   // Retornar el area de un rectángulo teniendo su altura y ancho
   // Tu código:
 }
