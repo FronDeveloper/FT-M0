@@ -76,7 +76,7 @@ function sonIguales(x, y) {
 }
 
 function tienenMismaLongitud(str1, str2) {
-  if(str1.length===str2.length){
+  if(str1.length === str2.length){
     return true
   }else{
     return false
@@ -89,7 +89,8 @@ function tienenMismaLongitud(str1, str2) {
 function menosQueNoventa(num) {
   if(num < 90){
     return true
-  }else{
+  }
+  else{
     return false
   }
   // Devuelve "true" si el argumento de la función "num" es menor que noventa
@@ -100,7 +101,8 @@ function menosQueNoventa(num) {
 function mayorQueCincuenta(num) {
   if(num > 50){
     return true
-  }else{
+  }
+  else{
     return false
   }
   // Devuelve "true" si el argumento de la función "num" es mayor que cincuenta
@@ -119,7 +121,8 @@ function obtenerResto(x, y) {
 function esPar(num) {
   if(num % 2 == 0){
     return true;
-  }else{
+  }
+  else{
     return false;
   }
   // Devuelve "true" si "num" es par
@@ -164,7 +167,7 @@ function elevar(num, exponent) {
 elevar(5,2)
 
 function redondearNumero(num) {
-  let redondeo=Math.round(num);
+  let redondeo = Math.round(num);
   return redondeo;
   // Redondea "num" al entero más próximo y devuélvelo
   // Tu código:
