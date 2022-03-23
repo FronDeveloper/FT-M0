@@ -148,7 +148,6 @@ function pasarUsuarioAPremium(usuarios) {
 function sumarLikesDeUsuario(usuario) {
 
   let sumarLike=0
-
   for(let i=0; i<usuario.posts.length; i++){
      sumarLike = sumarLike + usuario.posts[i].likes
 
