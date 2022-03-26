@@ -155,6 +155,7 @@ Ahora todo Alumno de Henry antes de Alumno es una Persona, asique podríamos dec
   }
 ```
 
+
 #### Constructores Anidados
 
 Pero en este caso estaríamos repitiendo código, y si en un futuro quisiera cambiar una propiedad tendría que hacerlo en ambos constructores.
