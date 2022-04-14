@@ -1,0 +1,30 @@
+
+h1{
+    color: darkgreen;
+    text-align: center;
+}
+.divClass {
+    text-align: center;
+}
+
+#thirdDiv ul li img{
+    width: 400px;
+}
+
+ul li{
+    list-style: none;
+}
+
+
+#thirdDiv{
+    height: 600px;
+    width: 500px;
+    background-color: darkorange;
+    padding: 50px;
+    border:  solid 2px #000;
+}
+
+#spanId{
+    font-size: 18px;
+    margin: 50px;
+}
